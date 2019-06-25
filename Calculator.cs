@@ -390,24 +390,24 @@ namespace WindowsFormsApp3
         {
             get
              {
-                temporary = Convert.ToDecimal(Math.Floor((anionCapasityL * FullVolume) / (anionCapasityL + cationCapasityL)));
+                temporary = Math.Round(Convert.ToDecimal(Math.Floor((anionCapasityL * FullVolume) / (anionCapasityL + cationCapasityL))),0);
 
                 if (temporary > ((1M - (valuePercentMix / 100M))) * FullVolume)
                 {
-                    VolumeTC007 = Convert.ToDecimal(Math.Floor((100M - valuePercentMix) * FullVolume) / 100M);
+                    VolumeTC007 = Math.Round(Convert.ToDecimal(Math.Floor((100M - valuePercentMix) * FullVolume) / 100M),0);
                     //MessageBox.Show("процент подмеса " + valuePercentMix.ToString() + temporary + "временное значение ");
                     return FullVolume - VolumeTC007;
 
                 }
                 else if (temporary < ((valuePercentMix / 100M) * FullVolume))
                 {
-                    VolumeTC007 = Convert.ToDecimal(Math.Floor((valuePercentMix / 100M) * FullVolume));
+                    VolumeTC007 = Math.Round(Convert.ToDecimal(Math.Floor((valuePercentMix / 100M) * FullVolume)),0);
                     //MessageBox.Show(valuePercentMix.ToString());
                     return FullVolume - VolumeTC007;
                 }
                 else /*MessageBox.Show(valuePercentMix.ToString());*/
                     VolumeTC007 = temporary;
-                    return  FullVolume - temporary;
+                    return FullVolume - temporary;
 
 
             }

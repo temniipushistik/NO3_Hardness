@@ -258,18 +258,18 @@ namespace WindowsFormsApp3
             this.label18.AutoSize = true;
             this.label18.Location = new System.Drawing.Point(252, 342);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(51, 17);
+            this.label18.Size = new System.Drawing.Size(25, 17);
             this.label18.TabIndex = 10;
-            this.label18.Text = "г-экв/л";
+            this.label18.Text = "м3";
             // 
             // label17
             // 
             this.label17.AutoSize = true;
             this.label17.Location = new System.Drawing.Point(252, 303);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(51, 17);
+            this.label17.Size = new System.Drawing.Size(25, 17);
             this.label17.TabIndex = 9;
-            this.label17.Text = "г-экв/л";
+            this.label17.Text = "м3";
             // 
             // tC007ResinL
             // 
@@ -622,6 +622,7 @@ namespace WindowsFormsApp3
             this.trackBarMix.Location = new System.Drawing.Point(8, 76);
             this.trackBarMix.Margin = new System.Windows.Forms.Padding(4);
             this.trackBarMix.Maximum = 50;
+            this.trackBarMix.Minimum = 30;
             this.trackBarMix.Name = "trackBarMix";
             this.trackBarMix.Size = new System.Drawing.Size(348, 53);
             this.trackBarMix.TabIndex = 0;
@@ -642,11 +643,11 @@ namespace WindowsFormsApp3
             // labelLog
             // 
             this.labelLog.AutoSize = true;
+            this.labelLog.ForeColor = System.Drawing.Color.Red;
             this.labelLog.Location = new System.Drawing.Point(22, 33);
             this.labelLog.Name = "labelLog";
             this.labelLog.Size = new System.Drawing.Size(0, 17);
             this.labelLog.TabIndex = 0;
-            this.labelLog.ForeColor = System.Drawing.Color.Red;
             // 
             // Form1
             // 
@@ -663,7 +664,7 @@ namespace WindowsFormsApp3
             this.Controls.Add(this.groupBox1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
-            this.Text = "Подбор смеси смол V3.0";
+            this.Text = "Подбор смеси смол V3.1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

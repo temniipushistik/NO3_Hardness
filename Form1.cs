@@ -175,8 +175,9 @@ namespace WindowsFormsApp3
             if ((NO3TextBox.Text != "" && NO3TextBox.Text != "0") && (SO4TextBox.Text != "" && SO4TextBox.Text != "0") && (hardnessTextBox.Text != "" && hardnessTextBox.Text != "0"))
 
             {
+                labelLog.Text = "";
 
-                
+
                 Attached();
 
                 tC007ResinL.Text = Calculator.CationCapasityL().ToString("0.0");
@@ -229,7 +230,7 @@ namespace WindowsFormsApp3
 
             {
 
-                MessageBox.Show("Нужно заполнить все исходные данные, они не должны быть нулями");
+                labelLog.Text="Нужно заполнить все исходные данные, они не должны быть нулями";
             }
 
 
